@@ -30,6 +30,30 @@
     
 
 }
+@font-face {
+    font-family: Waterfall;
+    src: url(./fonts/Formula1-Bold-4.ttf);
+}
+@font-face {
+    font-family: Waterfall2;
+    src: url(./fonts/Formula1-Regular-1.ttf);
+}
+@font-face {
+    font-family: Waterfall3;
+    src: url(./fonts/Formula1-Black.ttf);
+}
+@font-face {
+    font-family: Waterfall4;
+    src: url(./fonts/Formula1-Bold_web.ttf);
+}
+@font-face {
+    font-family: Waterfall5;
+    src: url(./fonts/Formula1-Italic.ttf);
+}
+@font-face {
+    font-family: Waterfall6;
+    src: url(./fonts/Formula1-Wide.ttf);
+}
 
 .navbar
 {
@@ -318,7 +342,7 @@
 .services {
     background: #fff;
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -341,6 +365,11 @@
 
 .services__wrapper {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.services__wrapper1 {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 }
@@ -349,6 +378,58 @@
     margin: 10px;
     height: 425px;
     width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image:  linear-gradient(
+        to right,
+        rgba(250, 7, 7, 0.842),
+        rgba(11, 236, 86, 0.5)
+    ); 
+
+    transition: 0.3s ease-in;
+}
+.services__card-First {
+    margin: 10px;
+    height: 700px;
+    width: 360px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image:  linear-gradient(
+        to right,
+        rgba(250, 7, 7, 0.842),
+        rgba(11, 236, 86, 0.5)
+    ); 
+
+    transition: 0.3s ease-in;
+}
+.services__card-Second {
+    margin: 10px;
+    height: 625px;
+    width: 360px;
+    border-radius: 4px;
+    display: flex;
+    top: auto;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image:  linear-gradient(
+        to right,
+        rgba(250, 7, 7, 0.842),
+        rgba(11, 236, 86, 0.5)
+    ); 
+
+    transition: 0.3s ease-in;
+}
+.services__card-Third {
+    margin: 10px;
+    height: 525px;
+    width: 360px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
