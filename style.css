@@ -1,26 +1,73 @@
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+*{
+box-sizing: border-box;
+margin: 0;
+margin-bottom: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
 }
 
+li, a, button {
+font-family: Waterfall7;
+font-weight: 500;
+font-size: 16px;
+color: black;
+text-decoration: none;
+}
 
+header {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 30px 10%;
+}
+
+.logo {
+cursor: pointer;
+margin-right: auto;
+}
+
+.nav__links {
+list-style: none;
+}
+
+.nav__links li {
+display: inline-block;
+padding: 0px 20px;
+}
+
+.nav__links li a {
+transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+color:  blueviolet;
+}
+
+button {
+margin-left: 20px;
+padding: 9px 25px;
+background-color: rgba(11, 236, 86, 1);
+border-radius: 50px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+}
+
+button:hover {
+background-color: rgb(224, 152, 18, 0.8);
+}
 .countdown
 {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    columns: 4;
-    text-decoration: none;
-    color: #f1a90d;
-    font-size: 1.3em;
-    z-index: 1;
-    position: relative;
-    
-
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0;
+columns: 4;
+text-decoration: none;
+color: #f1a90d;
+font-size: 1.3em;
+z-index: 1;
+position: relative;
 }
 @font-face {
     font-family: Waterfall;
@@ -46,81 +93,9 @@
     font-family: Waterfall6;
     src: url(./fonts/Formula1-Wide.ttf);
 }
-
-.navbar
-{
-    background-color: #a4a3a3;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    flw
-}
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-#navbar__logo {
-
-    background-color: #fff;
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    align-items: flex-start;
-    align-items: center;
-}
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-}
-
-.navbar__item {
-    height: 80px;
-}
-
-.navbar__links {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 125px;
-    text-decoration: none;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
-.navbar__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%;
-}
-
-.navbar__links:hover {
-    color: #f1a90d;
-    transition: all 0.3s ease;
+@font-face {
+    font-family: Waterfall7;
+    src: url(./fonts/Formula1-Bold.ttf);
 }
 
 @media screen and (max-width: 960px) {
@@ -1040,7 +1015,8 @@ html {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   
   a {
-    color: #1EAEDB;
+    color: #4a8ea3;
+    text-decoration: none;
   }
   
   a:hover {
