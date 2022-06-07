@@ -1,3 +1,59 @@
+const countToDate = new Date().setHours(new Date().getHours() + 24)
+let previousTimeBetweenDates
+setInterval(() => {
+  const currentDate = new Date()
+  const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
+  flipAllCards(timeBetweenDates)
+
+  previousTimeBetweenDates = timeBetweenDates
+}, 250)
+
+function flipAllCards(time) {
+  const seconds = time % 60
+  const minutes = Math.floor(time / 60) % 60
+  const hours = Math.floor(time / 3600)
+
+  flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10))
+  flip(document.querySelector("[data-hours-ones]"), hours % 10)
+  flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10))
+  flip(document.querySelector("[data-minutes-ones]"), minutes % 10)
+  flip(document.querySelector("[data-seconds-tens]"), Math.floor(seconds / 10))
+  flip(document.querySelector("[data-seconds-ones]"), seconds % 10)
+}
+
+function flip(flipCard, newNumber) {
+  const topHalf = flipCard.querySelector(".top")
+  const startNumber = parseInt(topHalf.textContent)
+  if (newNumber === startNumber) return
+
+  const bottomHalf = flipCard.querySelector(".bottom")
+  const topFlip = document.createElement("div")
+  topFlip.classList.add("top-flip")
+  const bottomFlip = document.createElement("div")
+  bottomFlip.classList.add("bottom-flip")
+
+  top.textContent = startNumber
+  bottomHalf.textContent = startNumber
+  topFlip.textContent = startNumber
+  bottomFlip.textContent = newNumber
+
+  topFlip.addEventListener("animationstart", e => {
+    topHalf.textContent = newNumber
+  })
+  topFlip.addEventListener("animationend", e => {
+    topFlip.remove()
+  })
+  bottomFlip.addEventListener("animationend", e => {
+    bottomHalf.textContent = newNumber
+    bottomFlip.remove()
+  })
+  flipCard.append(topFlip, bottomFlip)
+}
+
+
+
+// close mobile menu when clicking on menu
+
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar__logo');
@@ -53,38 +109,3 @@ const hideMobileMenu = () => {
 // navLogo.addEventListener('click', hideMobileMenu);
 
 
-//countdown timer 
-const countdown = document.querySelector('.countdown');
-const countdownDate = new Date('Jan 1, 2023 00:00:00').getTime();
-const countdownInterval = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    countdown.innerHTML = `
-        <div class="countdown__item">
-            <p class="countdown__number">${days}</p>
-            <p class="countdown__label">days</p>
-        </div>
-        <div class="countdown__item">
-            <p class="countdown__number">${hours}</p>
-            <p class="countdown__label">hours</p>
-        </div>
-        <div class="countdown__item">
-            <p class="countdown__number">${minutes}</p>
-            <p class="countdown__label">minutes</p>
-        </div>
-        <div class="countdown__item">
-            <p class="countdown__number">${seconds}</p>
-            <p class="countdown__label">seconds</p>
-        </div>
-    `;
-
-    if(distance < 0) {
-        clearInterval(countdownInterval);
-        countdown.innerHTML = '<h2>Happy New Year!</h2>';
-    }
-}, 1000);

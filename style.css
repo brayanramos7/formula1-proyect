@@ -4,6 +4,94 @@ margin: 0;
 margin-bottom: 0;
 padding: 0;
 font-family: 'Roboto', sans-serif;
+
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(226, 9, 9, 0.2);
+  border-radius: .1em;
+  font-size: 5.25rem;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .755em;
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f8f5f5;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+}
+
+.flip-card .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+
+.container {
+  display: flex;
+  gap: .5em;
+  justify-content: center;
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: .1em;
+}
+
+.segment-title {
+  font-size: 1rem;
 }
 
 li, a, button {
@@ -13,6 +101,7 @@ font-size: 16px;
 color: black;
 text-decoration: none;
 }
+
 
 header {
 display: flex;
@@ -35,12 +124,44 @@ display: inline-block;
 padding: 0px 20px;
 }
 
-.nav__links li a {
-transition: all 0.3s ease 0s;
+.nav__links li a
+{
+  position: relative;
+  text-decoration: none;
+  color: #f7b733;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 
-.nav__links li a:hover {
-color:  blueviolet;
+.nav__links li a:hover{
+color:#414345;
+transform: translateX(-20px);
+transition-delay: 0.5s;
+}
+.nav__links li a::before 
+{
+  pointer-events: none;
+  z-index: 1;
+  content: attr(data-text);
+  position: absolute;
+  bottom: -20px;
+  font-size: 1em;
+  color: #414345;
+  letter-spacing: 100px;
+  opacity: 0;
+  transition: 0.5s;
+  text-shadow: 0 0 16px #414345, 0 0 30px #414345, 0 0 80px #414345;
+  font-size: 0.50em;
+  font-weight: 500;
+}
+.nav__links li a:hover::before
+{
+  letter-spacing: 6px;
+  opacity: 1;
+  transition-delay: 0.5s;
 }
 
 button {

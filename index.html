@@ -21,89 +21,62 @@
         <img class="logo" src="" alt="logo">
         <nav>
             <ul class="nav__links" style="margin-bottom: 0;">
-                <li rel="stylesheet" href=""><a href="#">HOME</a></li>
-                <li rel="stylesheet" href=""><a href="#">DRIVERS</a></li>
+                <li rel="stylesheet" href=""><a href="#" data-text="HOME" >HOME</a></li>
+                <li rel="stylesheet" href=""><a href="#" data-text="DRIVERS" >DRIVERS</a></li>
             </ul>
         </nav>
         <a href="" class="cta"><button>STANDINGS</button></a>
     </header>
-
+    
     <div class="row">
-        <div class="seven columns">
-            <div>
-                <div class="container container_nested">
-                    <div class="row demo-row">
-                        <div class="six columns" style="background-color: yellow;">
-                            <h1>Random</h1>
-                        </div>
-                        <div class="row">
-                            <div class="twelve columns">
-                                <div>
-                                    <div class="container container_nested">
-                                        <div class="row demo row">
-                                            <div class="three columns" style="background-color: black;">
-                                                <h1>
-                                                    <div class="countdown__item">
-                                                        <div class="countdown__label">
-                                                            <span class="countdown__label-value">Days</span>
-                                                        </div>
-                                                        <div class="countdown__number">
-                                                            <span class="countdown__number-value">0</span>
-                                                        </div>
-                                                    </div>
-                                                </h1>
-                                            </div>
-                                            <div class="three columns" style="background-color: black;">
-                                                <h1>
-                                                    <div class="countdown__item">
-                                                        <div class="countdown__label">
-                                                            <span class="countdown__label-value">Hours</span>
-                                                        </div>
-                                                        <div class="countdown__number">
-                                                            <span class="countdown__number-value">0</span>
-                                                        </div>
-                                                    </div>
-                                                </h1>
-                                            </div>
-                                            <div class="three columns" style="background-color: black;">
-                                                <h1>
-                                                    <div class="countdown__item">
-                                                        <div class="countdown__label">
-                                                            <span class="countdown__label-value">Minutes</span>
-                                                        </div>
-                                                        <div class="countdown__number">
-                                                            <span class="countdown__number-value">0</span>
-                                                        </div>
-                                                    </div>
-                                                </h1>
-                                            </div>
-                                            <div class="three columns" style="background-color: black;">
-                                                <h1>
-                                                    <div class="countdown__item">
-                                                        <div class="countdown__label">
-                                                            <span class="countdown__label-value">Seconds</span>
-                                                        </div>
-                                                        <div class="countdown__number">
-                                                            <span class="countdown__number-value">0</span>
-                                                        </div>
-                                                    </div>
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="seven columns" style="border-top-right-radius: 25px; border-top: 1rem solid black; border-right: 1rem solid black;">Timer 
+
+            <div class="container">
+                <div class="container-segment">
+                  <div class="segment-title">Hours</div>
+                  <div class="segment">
+                    <div class="flip-card" data-hours-tens>
+                      <div class="top">2</div>
+                      <div class="bottom">2</div>
                     </div>
+                    <div class="flip-card" data-hours-ones>
+                      <div class="top">4</div>
+                      <div class="bottom">4</div>
+                    </div>
+                  </div>
                 </div>
+                <div class="container-segment">
+                  <div class="segment-title">Minutes</div>
+                  <div class="segment">
+                    <div class="flip-card" data-minutes-tens>
+                      <div class="top">0</div>
+                      <div class="bottom">0</div>
+                    </div>
+                    <div class="flip-card" data-minutes-ones>
+                      <div class="top">0</div>
+                      <div class="bottom">0</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-segment">
+                  <div class="segment-title">Seconds</div>
+                  <div class="segment">
+                    <div class="flip-card" data-seconds-tens>
+                      <div class="top">0</div>
+                      <div class="bottom">0</div>
+                    </div>
+                    <div class="flip-card" data-seconds-ones>
+                      <div class="top">0</div>
+                      <div class="bottom">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
-        <div class="five columns" style="background-color: orange;">
-            <div>
-                <h1>News</h1>
-            </div>
-        </div>
-    </div>
+            <div class="five columns" style="background-color: orange;">News</div>
+                       
+    
 
     <br>
 
