@@ -15,21 +15,29 @@
     <link rel="stylesheet" href="style.css">
     <title>F1 CUBANGP</title>
 </head>
-
 <body>
-    <header>
-        <img class="logo" src="./img/LOGO CUBAN GPPPP.png" alt="logo">
-        <nav>
-            <ul class="nav__links" style="margin-bottom: 0;">
-                <li rel="stylesheet" href=""><a href="#" data-text="HOME">HOME</a></li>
-                <li rel="stylesheet" href=""><a href="#" data-text="DRIVERS">DRIVERS</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="#home" src="" id="navbar__logo">Duke <img src="" alt=""></a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu" style="font-family: Waterfall7;">
+                 <li class="navbar__item">
+                     <a href="#home" class="navbar__links" id="home-page">Home</a>
+                 </li>
+                 <li class="navbar__item">
+                    <a href="#drivers" class="navbar__links" id="about-page">Drivers</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#standings" class="navbar__links" id="services-page">Standing</a>
+                </li>
+                </ul>
+            </div>
         </nav>
-        <a href="" class="cta"><button class="button-danger">STANDINGS</button></a>
-    </header>
     <img src="./img/checker.png" alt="" style="margin-bottom: 2rem;">
-
-
     <div class="six columns"
         style="border-top-right-radius: 15px; border-top: 10px #ee0000 solid; border-right: 10px solid #ee0000;">
         <div class="demo-col">
@@ -37,7 +45,8 @@
                 <div class="row demo-row" style="margin-top: 15px;">
                     <div class="twelve columns">
                         <div class="card">
-                            <div class="container" style="font-family: Waterfall7;">
+                            <h2 class="u-text-center" style="font-family: Waterfall7;">Round 5 in...</h2>
+                            <div class="container__count" style="font-family: Waterfall7;">
                                 <div class="container-segment">
                                     <div class="segment-title">Hours</div>
                                     <div class="segment">
@@ -82,6 +91,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="row">
                 <div class="twelve columns" style="margin-top: 10%;">
                     <div class="card">
@@ -225,7 +237,7 @@
         </div>
     </div>
     <!-- duke falta el standing seaction y el constroctor seaction  -->
-    <div class="container" id="drivers">
+    <div class="container" id="standings">
         <div class="row">
             <div class="two columns">
                 <div class="card">

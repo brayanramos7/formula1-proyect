@@ -72,7 +72,7 @@ const highlightMenu = () => {
     const aboutMenu = document.querySelector('#drivers-page');
     const servicesMenu = document.querySelector('#standing-page');
     let scrollPos = window.scrollY
-    //console.log(scrollPos);
+    console.log(scrollPos);
 
     // adds 'highlight' class to my manu items 
     if(window.innerWidth > 960 && scrollPos < 600) {
@@ -105,7 +105,7 @@ const hideMobileMenu = () => {
         menuLinks.classList.remove('active')
     }
 };
-// menuLinks.addEventListener('click', hideMobileMenu);
-// navLogo.addEventListener('click', hideMobileMenu);
+ menuLinks.addEventListener('click', hideMobileMenu);
+ navLogo.addEventListener('click', hideMobileMenu);
 
 
